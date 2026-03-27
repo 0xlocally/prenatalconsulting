@@ -5,8 +5,7 @@ export default function Footer() {
     <footer className="bg-[#2D2340] py-4 px-6">
       <div className="max-w-6xl mx-auto flex items-center justify-between flex-wrap gap-2">
         <span className="text-[11px] text-white/45">
-          &copy; {new Date().getFullYear()} Prenatal Consulting of Georgia
-          &middot; All rights reserved
+          &copy; {new Date().getFullYear()}{" "}Prenatal Consulting of Georgia &middot; All rights reserved
         </span>
         <div className="flex gap-4">
           <Link

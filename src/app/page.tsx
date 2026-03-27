@@ -1,43 +1,60 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-lav-pale to-sage-pale px-6 py-16 relative overflow-hidden">
-        <div className="max-w-6xl mx-auto relative z-10 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#EDE8F8] to-[#EAF2EB] py-20 px-10">
+        {/* Watermark — ghosted large logo behind all content */}
+        <div className="absolute inset-0 flex items-center justify-start pointer-events-none select-none">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.png"
+            alt=""
+            aria-hidden="true"
+            className="w-[680px] max-w-none mix-blend-multiply opacity-[0.13] -ml-16 -mt-8"
+          />
+        </div>
+
+        {/* Content — two column: text left, secondary logo right */}
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          {/* Left: hero copy */}
           <div>
-            <p className="text-[11px] tracking-[0.2em] uppercase text-sage-deep font-medium font-sub mb-3">
+            <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#5A7A63] font-sub mb-3">
               Expert Prenatal Guidance — Atlanta, Georgia
             </p>
-            <h1 className="font-serif text-4xl md:text-[42px] font-medium text-text-dark leading-tight mb-4 max-w-lg">
-              Your journey to <em className="text-lav-deep italic">confident</em>{" "}
+            <h1 className="font-serif text-4xl md:text-5xl font-medium text-[#2D2340] leading-[1.15] mb-5">
+              Your journey to{" "}
+              <em className="text-[#6B5BA8] italic">confident</em>{" "}
               parenthood starts here
             </h1>
-            <p className="text-[15px] text-text-soft leading-relaxed max-w-md mb-8">
+            <p className="text-base text-[#7A6E9A] leading-relaxed mb-8 max-w-md">
               Personalized prenatal consulting with a board-certified physician,
               designed to give you clarity, comfort, and a plan you can trust.
             </p>
             <div className="flex gap-3 flex-wrap">
-              <button className="bg-lav-deep text-white rounded-md px-6 py-3 text-sm font-medium hover:bg-lav-mid transition-colors cursor-pointer">
+              <Link
+                href="/contact"
+                className="bg-[#6B5BA8] hover:bg-[#5a4a97] text-white px-6 py-3 rounded-md text-sm font-medium transition-colors"
+              >
                 Book a Consultation
-              </button>
+              </Link>
               <Link
                 href="/services"
-                className="bg-transparent text-lav-deep border-[1.5px] border-lav-deep rounded-md px-6 py-3 text-sm font-medium hover:bg-lav-deep hover:text-white transition-colors"
+                className="border-2 border-[#6B5BA8] text-[#6B5BA8] hover:bg-[#EDE8F8] px-6 py-3 rounded-md text-sm font-medium transition-colors"
               >
                 Explore Services
               </Link>
             </div>
           </div>
-          <div className="flex justify-center items-center">
-            <Image
+
+          {/* Right: secondary logo */}
+          <div className="flex items-center justify-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="/logo.png"
               alt="Prenatal Consulting of Georgia"
-              width={300}
-              height={300}
-              className="w-[280px] h-auto drop-shadow-[0_8px_24px_rgba(107,91,168,0.15)]"
+              className="w-[340px] h-auto mix-blend-multiply drop-shadow-md"
             />
           </div>
         </div>
@@ -143,41 +160,44 @@ export default function Home() {
         </Link>
       </section>
 
-      {/* About Section */}
-      <section className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h2 className="font-serif text-[26px] text-text-dark font-medium mb-3">
-            Why Prenatal Consulting of Georgia?
-          </h2>
-          <p className="text-sm text-text-soft leading-relaxed mb-2">
-            Pregnancy brings countless questions, and navigating them alone can
-            feel overwhelming. Our concierge-style consulting service pairs you
-            with a board-certified OB/GYN to create a personalized roadmap for
-            your pregnancy and newborn journey.
-          </p>
-          <p className="text-sm text-text-soft leading-relaxed">
-            Whether you&apos;re a first-time parent seeking reassurance or navigating
-            a high-risk pregnancy, we meet you where you are with evidence-based
-            guidance and genuine compassion.
-          </p>
-        </div>
-        <div className="bg-lav-pale rounded-xl p-8 border border-lav-light/50">
-          <div className="grid grid-cols-2 gap-6">
-            {[
-              { num: "20+", label: "Years Experience" },
-              { num: "3", label: "Service Tiers" },
-              { num: "1:1", label: "Consultations" },
-              { num: "ATL", label: "Based in Georgia" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="font-serif text-3xl text-lav-deep font-semibold leading-none">
-                  {stat.num}
+      {/* About Section — subtle sage tint background */}
+      <section className="bg-[#F4F8F5] py-16 px-10">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="font-serif text-[26px] text-text-dark font-medium mb-3">
+              Why Prenatal Consulting of Georgia?
+            </h2>
+            <p className="text-sm text-text-soft leading-relaxed mb-2">
+              Pregnancy brings countless questions, and navigating them alone can
+              feel overwhelming. Our concierge-style consulting service pairs you
+              with a board-certified OB/GYN to create a personalized roadmap for
+              your pregnancy and newborn journey.
+            </p>
+            <p className="text-sm text-text-soft leading-relaxed">
+              Whether you&apos;re a first-time parent seeking reassurance or navigating
+              a high-risk pregnancy, we meet you where you are with evidence-based
+              guidance and genuine compassion.
+            </p>
+          </div>
+          {/* Stats box — sage instead of lavender */}
+          <div className="bg-[#EAF2EB] border border-[#B8D4BC] rounded-xl p-8">
+            <div className="grid grid-cols-2 gap-6">
+              {[
+                { num: "20+", label: "Years Experience" },
+                { num: "3", label: "Service Tiers" },
+                { num: "1:1", label: "Consultations" },
+                { num: "ATL", label: "Based in Georgia" },
+              ].map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <div className="font-serif text-3xl text-lav-deep font-semibold leading-none">
+                    {stat.num}
+                  </div>
+                  <div className="text-[11px] text-text-soft mt-1 uppercase tracking-wider font-sub">
+                    {stat.label}
+                  </div>
                 </div>
-                <div className="text-[11px] text-text-soft mt-1 uppercase tracking-wider font-sub">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>

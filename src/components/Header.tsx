@@ -26,7 +26,7 @@ export default function Header() {
               alt="Prenatal Consulting of Georgia"
               width={220}
               height={68}
-              className="h-[96px] w-auto object-contain"
+              className="h-[88px] w-auto object-contain"
               priority
             />
           </Link>

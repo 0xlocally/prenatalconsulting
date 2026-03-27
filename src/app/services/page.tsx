@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const tiers = [
   {
     tier: "Tier 1",
@@ -54,7 +56,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Page Header */}
-      <section className="bg-gradient-to-br from-lav-pale to-sage-pale px-6 py-10 border-b border-lav-deep/15">
+      <section className="bg-gradient-to-br from-[#EDE8F8] to-[#EAF2EB] px-6 py-10 border-b border-lav-deep/15">
         <div className="max-w-6xl mx-auto">
           <h1 className="font-serif text-3xl text-text-dark font-medium">
             Services &amp; Pricing
@@ -66,9 +68,9 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Intro */}
+      {/* Intro — full width */}
       <section className="max-w-6xl mx-auto px-6 pt-6">
-        <p className="text-sm text-text-soft leading-relaxed max-w-xl">
+        <p className="text-sm text-[#7A6E9A] leading-relaxed max-w-full mb-6">
           All packages include one-on-one consultations with Dr. Traub Mann.
           Book before your due date to secure your spot.
         </p>
@@ -91,8 +93,19 @@ export default function ServicesPage() {
                   Most Popular
                 </div>
               )}
-              <div className="bg-lav-pale px-5 pt-5 pb-4 border-b border-lav-deep/10">
-                <div className="text-[10px] uppercase tracking-[0.15em] text-lav-mid font-medium font-sub mb-1">
+              {/* Tier 1 & 3: sage-pale header; Tier 2 (featured): lavender header */}
+              <div
+                className={`px-5 pt-5 pb-4 border-b ${
+                  t.featured
+                    ? "bg-lav-pale border-lav-deep/10"
+                    : "bg-[#EAF2EB] border-sage-light"
+                }`}
+              >
+                <div
+                  className={`text-[10px] uppercase tracking-[0.15em] font-medium font-sub mb-1 ${
+                    t.featured ? "text-lav-mid" : "text-sage-mid"
+                  }`}
+                >
                   {t.tier}
                 </div>
                 <h3 className="font-serif text-base font-medium text-text-dark leading-snug mb-2">
@@ -122,9 +135,12 @@ export default function ServicesPage() {
                 ))}
               </ul>
               <div className="px-5 pb-5">
-                <button className="w-full bg-lav-deep text-white rounded-md py-2.5 text-[12.5px] font-medium hover:bg-lav-mid transition-colors cursor-pointer">
+                <Link
+                  href="/contact"
+                  className="block w-full bg-lav-deep text-white rounded-md py-2.5 text-[12.5px] font-medium hover:bg-lav-mid transition-colors text-center"
+                >
                   Book This Package
-                </button>
+                </Link>
                 {t.cancelNote && (
                   <p className="text-[10.5px] text-text-soft text-center mt-1.5 italic leading-relaxed">
                     {t.cancelNote}

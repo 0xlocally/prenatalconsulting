@@ -42,3 +42,8 @@ body {
   background: var(--cream);
   color: var(--text-dark);
 }
+
+.logo-blend {
+  mix-blend-mode: multiply;
+  filter: contrast(1.05);
+}
