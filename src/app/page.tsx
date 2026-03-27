@@ -5,19 +5,8 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#EDE8F8] to-[#EAF2EB] py-20 px-10">
-        {/* Watermark — ghosted large logo behind all content */}
-        <div className="absolute inset-0 flex items-center justify-start pointer-events-none select-none">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/logo.png"
-            alt=""
-            aria-hidden="true"
-            className="w-[680px] max-w-none mix-blend-multiply opacity-[0.13] -ml-16 -mt-8"
-          />
-        </div>
-
-        {/* Content — two column: text left, secondary logo right */}
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        {/* Content — two column: text left, logo right */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Left: hero copy */}
           <div>
             <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#5A7A63] font-sub mb-3">
@@ -48,13 +37,17 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right: secondary logo */}
+          {/* Right: logo — frameless, blend mode kills white bg */}
           <div className="flex items-center justify-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo.png"
               alt="Prenatal Consulting of Georgia"
-              className="w-[340px] h-auto mix-blend-multiply drop-shadow-md"
+              style={{
+                width: "380px",
+                height: "auto",
+                mixBlendMode: "multiply",
+              }}
             />
           </div>
         </div>

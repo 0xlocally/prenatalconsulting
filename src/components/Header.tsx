@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -16,27 +15,32 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="bg-warm-white border-b border-lav-deep/15">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Top bar */}
-        <div className="flex items-center justify-between py-3 border-b border-lav-deep/10">
-          <Link href="/">
-            <Image
-              src="/logo.png"
-              alt="Prenatal Consulting of Georgia"
-              width={220}
-              height={68}
-              className="h-[88px] w-auto object-contain"
-              priority
-            />
-          </Link>
-          <button className="bg-lav-deep text-white rounded-md px-5 py-2.5 text-sm font-medium tracking-wide hover:bg-lav-mid transition-colors cursor-pointer">
-            Request Appointment
-          </button>
-        </div>
+    <header className="relative bg-white border-b border-purple-100 overflow-hidden">
+      {/* Ghosted logo figure — right side, top-cropped */}
+      <div
+        className="absolute right-8 top-0 pointer-events-none select-none"
+        aria-hidden="true"
+        style={{ height: "100%" }}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logo.png"
+          alt=""
+          style={{
+            height: "260px",
+            width: "auto",
+            mixBlendMode: "multiply",
+            opacity: 0.13,
+            marginTop: "-20px",
+            objectFit: "contain",
+            objectPosition: "top",
+          }}
+        />
+      </div>
 
-        {/* Navigation */}
-        <nav className="flex gap-0">
+      {/* Single unified row: nav links left, CTA right */}
+      <div className="relative z-10 flex items-center justify-between px-10 py-4">
+        <nav className="flex items-center gap-8">
           {navLinks.map((link) => {
             const isActive =
               link.href === "/"
@@ -46,10 +50,10 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-3 text-[13px] border-b-2 transition-colors whitespace-nowrap ${
+                className={`text-sm transition-colors ${
                   isActive
-                    ? "text-lav-deep border-lav-deep font-medium"
-                    : "text-text-mid border-transparent hover:text-lav-deep hover:border-lav-deep"
+                    ? "font-medium text-[#6B5BA8] border-b-2 border-[#6B5BA8] pb-0.5"
+                    : "text-[#4A3F6B] hover:text-[#6B5BA8]"
                 }`}
               >
                 {link.label}
@@ -57,6 +61,13 @@ export default function Header() {
             );
           })}
         </nav>
+
+        <Link
+          href="/contact"
+          className="bg-[#6B5BA8] hover:bg-[#5a4a97] text-white text-sm font-medium px-5 py-2.5 rounded-md transition-colors"
+        >
+          Request Appointment
+        </Link>
       </div>
     </header>
   );
