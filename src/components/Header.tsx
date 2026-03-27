@@ -15,30 +15,65 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="relative bg-white border-b border-purple-100 overflow-hidden">
-      {/* Ghosted logo figure — right side, top-cropped */}
-      <div
-        className="absolute right-8 top-0 pointer-events-none select-none"
-        aria-hidden="true"
-        style={{ height: "100%" }}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/logo.png"
-          alt=""
-          style={{
-            height: "260px",
-            width: "auto",
-            mixBlendMode: "multiply",
-            opacity: 0.13,
-            marginTop: "-20px",
-            objectFit: "contain",
-            objectPosition: "top",
-          }}
-        />
+    <header className="relative bg-white border-b border-purple-100">
+      {/* Top row: horizontal logo lockup */}
+      <div className="flex items-center px-10 pt-6 pb-2">
+        <a href="/" className="flex items-center gap-0 group" aria-label="Prenatal Consulting of Georgia - Home">
+          {/* LEFT: just the mark — crop to the figure area of the logo */}
+          <div
+            className="relative overflow-hidden flex-shrink-0"
+            style={{
+              width: '72px',
+              height: '72px',
+            }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo.png"
+              alt=""
+              aria-hidden="true"
+              style={{
+                width: '130px',
+                maxWidth: 'none',
+                position: 'absolute',
+                top: '-6px',
+                left: '-22px',
+              }}
+            />
+          </div>
+
+          {/* RIGHT: text matching the logo fonts */}
+          <div className="flex flex-col justify-center leading-none ml-2">
+            <span
+              style={{
+                fontFamily: "'Playfair Display', Georgia, serif",
+                fontSize: '20px',
+                fontWeight: '600',
+                color: '#3D2F6B',
+                lineHeight: '1.1',
+                letterSpacing: '-0.01em',
+              }}
+            >
+              Prenatal Consulting
+            </span>
+            <span
+              style={{
+                fontFamily: "'Montserrat', sans-serif",
+                fontSize: '9px',
+                fontWeight: '400',
+                color: '#9B8CC4',
+                letterSpacing: '0.22em',
+                textTransform: 'uppercase' as const,
+                marginTop: '3px',
+              }}
+            >
+              — of Georgia —
+            </span>
+          </div>
+        </a>
       </div>
 
-      {/* Single unified row: nav links left, CTA right */}
+      {/* Bottom row: nav links left, CTA right */}
       <div className="relative z-10 flex items-center justify-between px-10 py-4">
         <nav className="flex items-center gap-8">
           {navLinks.map((link) => {
