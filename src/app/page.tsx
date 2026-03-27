@@ -1,33 +1,44 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
       <section className="bg-gradient-to-br from-lav-pale to-sage-pale px-6 py-16 relative overflow-hidden">
-        <div className="absolute -right-10 -top-10 w-72 h-72 rounded-full bg-lav-deep/[0.07]" />
-        <div className="max-w-6xl mx-auto relative z-10">
-          <p className="text-[11px] tracking-[0.2em] uppercase text-sage-deep font-medium font-sub mb-3">
-            Expert Prenatal Guidance — Atlanta, Georgia
-          </p>
-          <h1 className="font-serif text-4xl md:text-[42px] font-medium text-text-dark leading-tight mb-4 max-w-lg">
-            Your journey to <em className="text-lav-deep italic">confident</em>{" "}
-            parenthood starts here
-          </h1>
-          <p className="text-[15px] text-text-soft leading-relaxed max-w-md mb-8">
-            Personalized prenatal consulting with a board-certified physician,
-            designed to give you clarity, comfort, and a plan you can trust.
-          </p>
-          <div className="flex gap-3 flex-wrap">
-            <button className="bg-lav-deep text-white rounded-md px-6 py-3 text-sm font-medium hover:bg-lav-mid transition-colors cursor-pointer">
-              Book a Consultation
-            </button>
-            <Link
-              href="/services"
-              className="bg-transparent text-lav-deep border-[1.5px] border-lav-deep rounded-md px-6 py-3 text-sm font-medium hover:bg-lav-deep hover:text-white transition-colors"
-            >
-              Explore Services
-            </Link>
+        <div className="max-w-6xl mx-auto relative z-10 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+          <div>
+            <p className="text-[11px] tracking-[0.2em] uppercase text-sage-deep font-medium font-sub mb-3">
+              Expert Prenatal Guidance — Atlanta, Georgia
+            </p>
+            <h1 className="font-serif text-4xl md:text-[42px] font-medium text-text-dark leading-tight mb-4 max-w-lg">
+              Your journey to <em className="text-lav-deep italic">confident</em>{" "}
+              parenthood starts here
+            </h1>
+            <p className="text-[15px] text-text-soft leading-relaxed max-w-md mb-8">
+              Personalized prenatal consulting with a board-certified physician,
+              designed to give you clarity, comfort, and a plan you can trust.
+            </p>
+            <div className="flex gap-3 flex-wrap">
+              <button className="bg-lav-deep text-white rounded-md px-6 py-3 text-sm font-medium hover:bg-lav-mid transition-colors cursor-pointer">
+                Book a Consultation
+              </button>
+              <Link
+                href="/services"
+                className="bg-transparent text-lav-deep border-[1.5px] border-lav-deep rounded-md px-6 py-3 text-sm font-medium hover:bg-lav-deep hover:text-white transition-colors"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </div>
+          <div className="flex justify-center items-center">
+            <Image
+              src="/logo.png"
+              alt="Prenatal Consulting of Georgia"
+              width={300}
+              height={300}
+              className="w-[280px] h-auto drop-shadow-[0_8px_24px_rgba(107,91,168,0.15)]"
+            />
           </div>
         </div>
       </section>
