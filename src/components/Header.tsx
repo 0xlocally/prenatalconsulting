@@ -19,12 +19,12 @@ export default function Header() {
       {/* Top row: horizontal logo lockup */}
       <div className="flex items-center px-10 pt-6 pb-2">
         <a href="/" className="flex items-center gap-0 group" aria-label="Prenatal Consulting of Georgia - Home">
-          {/* LEFT: just the mark — crop to the figure area of the logo */}
+          {/* Mark crop — tighter on all 4 sides, especially bottom */}
           <div
             className="relative overflow-hidden flex-shrink-0"
             style={{
-              width: '72px',
-              height: '72px',
+              width: '80px',
+              height: '68px',
             }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -33,25 +33,29 @@ export default function Header() {
               alt=""
               aria-hidden="true"
               style={{
-                width: '130px',
+                width: '155px',
                 maxWidth: 'none',
                 position: 'absolute',
-                top: '-6px',
-                left: '-22px',
+                top: '-4px',
+                left: '-18px',
               }}
             />
           </div>
 
-          {/* RIGHT: text matching the logo fonts */}
-          <div className="flex flex-col justify-center leading-none ml-2">
+          {/* Text block — center the subtitle under the main line */}
+          <div
+            className="flex flex-col justify-center ml-2"
+            style={{ lineHeight: 'normal' }}
+          >
             <span
               style={{
                 fontFamily: "'Playfair Display', Georgia, serif",
                 fontSize: '20px',
                 fontWeight: '600',
                 color: '#3D2F6B',
-                lineHeight: '1.1',
                 letterSpacing: '-0.01em',
+                display: 'block',
+                textAlign: 'left',
               }}
             >
               Prenatal Consulting
@@ -65,6 +69,8 @@ export default function Header() {
                 letterSpacing: '0.22em',
                 textTransform: 'uppercase' as const,
                 marginTop: '3px',
+                display: 'block',
+                textAlign: 'center',
               }}
             >
               — of Georgia —
