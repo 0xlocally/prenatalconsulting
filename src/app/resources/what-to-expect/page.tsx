@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function WhatToExpectPage() {
   return (
     <>
@@ -47,6 +49,14 @@ export default function WhatToExpectPage() {
               </li>
             ))}
           </ul>
+          <div className="mt-6 pt-4 border-t border-lav-deep/10">
+            <Link
+              href="/resources"
+              className="text-[12.5px] text-lav-deep font-medium hover:underline"
+            >
+              &larr; Back to Patient Resources
+            </Link>
+          </div>
         </div>
       </section>
     </>

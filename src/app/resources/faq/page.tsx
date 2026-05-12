@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -108,6 +109,15 @@ export default function FAQPage() {
         <p className="text-[11px] text-text-soft mt-6 italic">
           Sources: March of Dimes and Centers for Disease Control
         </p>
+
+        <div className="mt-6 pt-4 border-t border-lav-deep/10 max-w-3xl">
+          <Link
+            href="/resources"
+            className="text-[12.5px] text-lav-deep font-medium hover:underline"
+          >
+            &larr; Back to Patient Resources
+          </Link>
+        </div>
       </section>
     </>
   );

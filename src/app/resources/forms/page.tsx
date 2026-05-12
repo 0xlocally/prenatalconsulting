@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function FormsPage() {
   return (
     <>
@@ -24,6 +26,14 @@ export default function FormsPage() {
           >
             Book Your Consultation
           </a>
+          <div className="mt-6 pt-4 border-t border-lav-deep/10">
+            <Link
+              href="/resources"
+              className="text-[12.5px] text-lav-deep font-medium hover:underline"
+            >
+              &larr; Back to Patient Resources
+            </Link>
+          </div>
         </div>
       </section>
     </>
