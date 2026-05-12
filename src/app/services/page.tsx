@@ -135,12 +135,14 @@ export default function ServicesPage() {
                 ))}
               </ul>
               <div className="px-5 pb-5">
-                <Link
-                  href="/contact"
+                <a
+                  href="https://prenatalconsulting.janeapp.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full bg-lav-deep text-white rounded-md py-2.5 text-[12.5px] font-medium hover:bg-lav-mid transition-colors text-center"
                 >
                   Book This Package
-                </Link>
+                </a>
                 {t.cancelNote && (
                   <p className="text-[10.5px] text-text-soft text-center mt-1.5 italic leading-relaxed">
                     {t.cancelNote}
@@ -152,6 +154,9 @@ export default function ServicesPage() {
         </div>
         <p className="text-center text-[13px] text-text-soft italic mt-6">
           Book your consultation now to secure a spot before your due date.
+        </p>
+        <p className="text-center text-[12px] text-text-soft italic mt-2">
+          *Ask your insurance company if consultations are HSA/FSA eligible.
         </p>
       </section>
     </>

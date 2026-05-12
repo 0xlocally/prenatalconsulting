@@ -22,12 +22,14 @@ export default function Home() {
               designed to give you clarity, comfort, and a plan you can trust.
             </p>
             <div className="flex gap-3 flex-wrap">
-              <Link
-                href="/contact"
+              <a
+                href="https://prenatalconsulting.janeapp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#6B5BA8] hover:bg-[#5a4a97] text-white px-6 py-3 rounded-md text-sm font-medium transition-colors"
               >
                 Book a Consultation
-              </Link>
+              </a>
               <Link
                 href="/services"
                 className="border-2 border-[#6B5BA8] text-[#6B5BA8] hover:bg-[#EDE8F8] px-6 py-3 rounded-md text-sm font-medium transition-colors"
@@ -74,8 +76,8 @@ export default function Home() {
             Meet Your Provider
           </h3>
           <p className="text-[13px] text-text-soft leading-relaxed">
-            Dr. Terri Traub Mann, MD brings decades of obstetric expertise to
-            every consultation.
+            Dr. Terri Traub Mann, MD — neonatologist, pediatrician, and
+            Johns Hopkins trained — brings expert care to every consultation.
           </p>
           <span className="inline-block mt-3 text-xs text-lav-deep font-medium group-hover:underline">
             View bio →

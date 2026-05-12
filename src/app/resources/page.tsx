@@ -1,15 +1,19 @@
+import Link from "next/link";
+
 const resources = [
   {
     title: "Patient Forms",
     description:
       "Complete your intake forms before your appointment to make the most of your consultation time. Forms can be downloaded and returned via email or brought to your session.",
     link: "Download patient forms →",
+    href: "/resources/forms",
   },
   {
     title: "Privacy Policy",
     description:
       "Your health information is private and protected. Review our full HIPAA-compliant privacy policy to understand how we handle and safeguard your personal data.",
     link: "Read privacy policy →",
+    href: "/resources/privacy",
     id: "privacy",
   },
   {
@@ -17,12 +21,14 @@ const resources = [
     description:
       "Not sure what to bring or how to prepare? Our prep guide walks you through everything to make your session as productive as possible.",
     link: "View preparation guide →",
+    href: "/resources/what-to-expect",
   },
   {
     title: "Frequently Asked Questions",
     description:
       "Have questions about our services or process? Browse our FAQ for quick answers to the most common questions we receive.",
     link: "View FAQs →",
+    href: "/resources/faq",
   },
 ];
 
@@ -57,9 +63,12 @@ export default function ResourcesPage() {
               <p className="text-[13px] text-text-soft leading-relaxed mb-3">
                 {r.description}
               </p>
-              <span className="text-[12.5px] text-lav-deep font-medium cursor-pointer underline decoration-lav-light hover:decoration-lav-deep transition-colors">
+              <Link
+                href={r.href}
+                className="text-[12.5px] text-lav-deep font-medium underline decoration-lav-light hover:decoration-lav-deep transition-colors"
+              >
                 {r.link}
-              </span>
+              </Link>
             </div>
           ))}
         </div>

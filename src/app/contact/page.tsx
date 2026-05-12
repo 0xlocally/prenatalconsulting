@@ -1,10 +1,9 @@
 const hours = [
-  { day: "Monday", time: "9:00 am \u2013 5:00 pm" },
-  { day: "Tuesday", time: "9:00 am \u2013 5:00 pm" },
-  { day: "Wednesday", time: "9:00 am \u2013 5:00 pm" },
-  { day: "Thursday", time: "9:00 am \u2013 5:00 pm" },
-  { day: "Friday", time: "9:00 am \u2013 3:00 pm" },
-  { day: "Saturday \u2013 Sunday", time: "Closed" },
+  { day: "Monday", time: "9:00 am \u2013 3:00 pm" },
+  { day: "Tuesday", time: "9:00 am \u2013 3:00 pm" },
+  { day: "Wednesday", time: "9:00 am \u2013 3:00 pm" },
+  { day: "Thursday", time: "9:00 am \u2013 3:00 pm" },
+  { day: "Friday \u2013 Sunday", time: "Closed" },
 ];
 
 export default function ContactPage() {
@@ -34,10 +33,10 @@ export default function ContactPage() {
             <div className="flex gap-3 mb-3 text-[13px] text-text-mid items-start">
               <span className="text-text-soft text-xs min-w-[60px]">Email</span>
               <a
-                href="mailto:terri@prenatalconsultingga.com"
+                href="mailto:info@prenatalconsulting.com"
                 className="text-lav-deep font-medium hover:underline"
               >
-                terri@prenatalconsultingga.com
+                info@prenatalconsulting.com
               </a>
             </div>
             <div className="flex gap-3 mb-3 text-[13px] text-text-mid items-start">

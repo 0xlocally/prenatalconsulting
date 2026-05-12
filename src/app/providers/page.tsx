@@ -15,12 +15,15 @@ export default function ProvidersPage() {
 
       {/* Provider Card */}
       <section className="max-w-6xl mx-auto px-6 py-8">
-        <div className="bg-white rounded-xl border border-lav-deep/15 overflow-hidden grid grid-cols-1 md:grid-cols-[200px_1fr]">
-          {/* Photo Placeholder */}
-          <div className="bg-gradient-to-b from-lav-pale to-lav-light flex flex-col items-center justify-center py-8 px-4 gap-2">
-            <div className="w-20 h-20 rounded-full bg-lav-mid flex items-center justify-center font-serif text-2xl text-white font-semibold">
-              TTM
-            </div>
+        <div className="bg-white rounded-xl border border-lav-deep/15 overflow-hidden grid grid-cols-1 md:grid-cols-[220px_1fr]">
+          {/* Photo */}
+          <div className="bg-gradient-to-b from-lav-pale to-lav-light flex flex-col items-center justify-center py-8 px-4 gap-3">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/terri-headshot.jpg"
+              alt="Dr. Terri Traub Mann"
+              className="w-36 h-36 rounded-full object-cover border-3 border-white shadow-md"
+            />
             <div className="text-xs text-lav-deep text-center font-medium">
               Dr. Terri Traub Mann
             </div>
@@ -32,29 +35,43 @@ export default function ProvidersPage() {
               Terri Traub Mann, MD
             </h2>
             <p className="text-[11px] text-sage-deep uppercase tracking-[0.14em] font-medium font-sub mb-4">
-              Founder &amp; Prenatal Consultant
+              Founder · Neonatologist &amp; Pediatrician
             </p>
-            <p className="text-[13.5px] text-text-soft leading-relaxed mb-4">
-              Dr. Terri Traub Mann is a board-certified OB/GYN with a passion
-              for empowering expectant families through education and
-              personalized guidance. Drawing on her extensive experience in
-              obstetrics, Dr. Mann founded Prenatal Consulting of Georgia to fill
-              a critical gap in maternity care — giving families the one-on-one
-              time and expert attention they deserve outside of a traditional
-              clinical setting.
+            <p className="text-[13.5px] text-text-soft leading-relaxed mb-3">
+              Originally from South Africa, my family and I moved to Atlanta
+              when I was 9 years old. I went on to earn my Bachelor of Science
+              in Biology and Psychology from the University of Georgia. I then
+              completed medical school at the Mercer University School of
+              Medicine in Savannah, Georgia.
+            </p>
+            <p className="text-[13.5px] text-text-soft leading-relaxed mb-3">
+              Upon graduating, I relocated to Washington, DC, where I completed
+              both my pediatric residency and neonatology fellowship at
+              Children&apos;s National Hospital and The George Washington
+              University Hospital. I began my medical career as an attending
+              physician at Johns Hopkins Children&apos;s Center in Baltimore, MD
+              in their level IV NICU.
+            </p>
+            <p className="text-[13.5px] text-text-soft leading-relaxed mb-3">
+              In 2021, my husband and I returned to Atlanta, where we have built
+              our life and family. Outside of work, I enjoy spending time
+              outdoors, cooking and baking — especially if it involves
+              chocolate — and spending time with my husband, 2 sons, and our
+              dog, Molly.
             </p>
             <p className="text-[13.5px] text-text-soft leading-relaxed mb-5">
-              Her consultations cover everything from birth plan development and
-              delivery room preparation to newborn care, feeding, and high-risk
-              pregnancy support, all tailored to each family&apos;s unique
-              situation and goals.
+              As a mother, pediatrician, and specialist, caring for both
+              premature and full-term infants, as well as supporting their
+              families during critical moments, is a profound privilege and one
+              that I approach with deep commitment, empathy, and compassion.
             </p>
             <div className="flex gap-2 flex-wrap">
               {[
-                "Board Certified OB/GYN",
-                "Prenatal Specialist",
-                "Newborn Care",
+                "Board Certified Neonatologist",
+                "Pediatrician",
+                "NICU Specialist",
                 "High-Risk Pregnancy",
+                "Johns Hopkins Trained",
                 "Atlanta, GA",
               ].map((tag) => (
                 <span

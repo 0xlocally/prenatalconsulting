@@ -9,7 +9,7 @@ export default function Footer() {
         </span>
         <div className="flex gap-4">
           <Link
-            href="/resources#privacy"
+            href="/resources/privacy"
             className="text-[11px] text-white/50 underline hover:text-white/80 transition-colors"
           >
             Privacy Policy
