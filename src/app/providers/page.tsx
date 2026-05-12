@@ -22,7 +22,7 @@ export default function ProvidersPage() {
             <img
               src="/terri-headshot.jpg"
               alt="Dr. Terri Traub Mann"
-              className="w-36 h-36 rounded-full object-cover border-3 border-white shadow-md"
+              className="w-36 h-36 rounded-full object-cover object-[center_25%] border-3 border-white shadow-md"
             />
             <div className="text-xs text-lav-deep text-center font-medium">
               Dr. Terri Traub Mann
