@@ -25,7 +25,7 @@ const tiers = [
     priceNote: "Pay in full \u00B7 or 3 payments of $266.67",
     features: [
       "Everything in Tier 1",
-      "2 additional 1:1 consultations (60 min each)",
+      "2 additional 1:1 consultations (55 min each)",
       "Personalized newborn care plan",
       "Guidance tailored to your pregnancy",
       "Direct messaging support (2 emails per session)",
@@ -41,7 +41,7 @@ const tiers = [
     priceNote: "Pay in full \u00B7 or 5 payments of $300",
     features: [
       "Everything in Tier 1",
-      "4 additional 1:1 consultations (60 min each)",
+      "4 additional 1:1 consultations (55 min each)",
       "Personalized newborn care plan",
       "Priority messaging (unlimited during pregnancy)",
       "Detailed contingency planning",
