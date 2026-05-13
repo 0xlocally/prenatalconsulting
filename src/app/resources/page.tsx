@@ -4,9 +4,10 @@ const resources = [
   {
     title: "Patient Forms",
     description:
-      "Complete your intake forms before your appointment to make the most of your consultation time. Forms can be downloaded and returned via email or brought to your session.",
-    link: "Download patient forms →",
-    href: "/resources/forms",
+      "Required forms may be completed after scheduling your consultation.",
+    link: "Book your consultation →",
+    href: "https://prenatalconsulting.janeapp.com/",
+    external: true,
   },
   {
     title: "Privacy Policy",
@@ -63,12 +64,23 @@ export default function ResourcesPage() {
               <p className="text-[13px] text-text-soft leading-relaxed mb-3">
                 {r.description}
               </p>
-              <Link
-                href={r.href}
-                className="text-[12.5px] text-lav-deep font-medium underline decoration-lav-light hover:decoration-lav-deep transition-colors"
-              >
-                {r.link}
-              </Link>
+              {r.external ? (
+                <a
+                  href={r.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[12.5px] text-lav-deep font-medium underline decoration-lav-light hover:decoration-lav-deep transition-colors"
+                >
+                  {r.link}
+                </a>
+              ) : (
+                <Link
+                  href={r.href}
+                  className="text-[12.5px] text-lav-deep font-medium underline decoration-lav-light hover:decoration-lav-deep transition-colors"
+                >
+                  {r.link}
+                </Link>
+              )}
             </div>
           ))}
         </div>

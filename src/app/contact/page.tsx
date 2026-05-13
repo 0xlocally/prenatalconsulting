@@ -39,17 +39,6 @@ export default function ContactPage() {
                 info@prenatalconsulting.com
               </a>
             </div>
-            <div className="flex gap-3 mb-3 text-[13px] text-text-mid items-start">
-              <span className="text-text-soft text-xs min-w-[60px]">
-                Location
-              </span>
-              <span>Atlanta, Georgia</span>
-            </div>
-            <div className="mt-4 bg-sage-pale rounded-lg p-3.5 text-[12.5px] text-sage-deep leading-relaxed border border-sage-light/50">
-              Clicking the email above opens your email provider with Dr.
-              Mann&apos;s address pre-filled. To request an appointment, use the
-              button at the top of any page.
-            </div>
           </div>
 
           {/* Hours */}

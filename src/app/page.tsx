@@ -165,8 +165,8 @@ export default function Home() {
             <p className="text-sm text-text-soft leading-relaxed mb-2">
               Pregnancy brings countless questions, and navigating them alone can
               feel overwhelming. Our concierge-style consulting service pairs you
-              with a board-certified OB/GYN to create a personalized roadmap for
-              your pregnancy and newborn journey.
+              with a neonatologist and pediatrician to create a personalized
+              roadmap for your newborn journey.
             </p>
             <p className="text-sm text-text-soft leading-relaxed">
               Whether you&apos;re a first-time parent seeking reassurance or navigating
@@ -176,12 +176,11 @@ export default function Home() {
           </div>
           {/* Stats box — sage instead of lavender */}
           <div className="bg-[#EAF2EB] border border-[#B8D4BC] rounded-xl p-8">
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-3 gap-6">
               {[
-                { num: "20+", label: "Years Experience" },
+                { num: "15+", label: "Years Experience" },
                 { num: "3", label: "Service Tiers" },
                 { num: "1:1", label: "Consultations" },
-                { num: "ATL", label: "Based in Georgia" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <div className="font-serif text-3xl text-lav-deep font-semibold leading-none">

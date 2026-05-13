@@ -71,7 +71,6 @@ export default function ProvidersPage() {
                 "Pediatrician",
                 "NICU Specialist",
                 "High-Risk Pregnancy",
-                "Johns Hopkins Trained",
                 "Atlanta, GA",
               ].map((tag) => (
                 <span

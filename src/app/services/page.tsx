@@ -22,7 +22,7 @@ const tiers = [
     name: "Comprehensive Prenatal & Newborn Planning Program",
     tagline: "For parents who want a structured, step-by-step plan",
     price: "$800",
-    priceNote: "Pay in full \u00B7 or 3 payments of $266.67",
+    priceNote: "3 payments of $266.67",
     features: [
       "Everything in Tier 1",
       "2 additional 1:1 consultations (55 min each)",
@@ -38,7 +38,7 @@ const tiers = [
     name: "High-Risk Pregnancy + NICU Readiness Program",
     tagline: "Expert-level guidance and ongoing support",
     price: "$1,500",
-    priceNote: "Pay in full \u00B7 or 5 payments of $300",
+    priceNote: "5 payments of $300",
     features: [
       "Everything in Tier 1",
       "4 additional 1:1 consultations (55 min each)",
