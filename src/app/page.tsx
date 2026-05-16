@@ -18,7 +18,7 @@ export default function Home() {
               parenthood starts here
             </h1>
             <p className="text-base text-[#7A6E9A] leading-relaxed mb-8 max-w-md">
-              Personalized prenatal consulting with a board-certified physician,
+              Personalized prenatal consulting with a board-certified neonatologist and pediatrician,
               designed to give you clarity, comfort, and a plan you can trust.
             </p>
             <div className="flex gap-3 flex-wrap">
@@ -76,8 +76,8 @@ export default function Home() {
             Meet Your Provider
           </h3>
           <p className="text-[13px] text-text-soft leading-relaxed">
-            Dr. Terri Traub Mann, MD — neonatologist, pediatrician, and
-            Johns Hopkins trained — brings expert care to every consultation.
+            Dr. Terri Traub Mann, MD — neonatologist and
+            pediatrician — brings expert care to every consultation.
           </p>
           <span className="inline-block mt-3 text-xs text-lav-deep font-medium group-hover:underline">
             View bio →
@@ -111,7 +111,7 @@ export default function Home() {
             Our Services
           </h3>
           <p className="text-[13px] text-text-soft leading-relaxed">
-            Three consultation tiers tailored to your risk level, from
+            Three consultation tiers tailored to your individual needs, from
             first-time parents to high-risk pregnancies.
           </p>
           <span className="inline-block mt-3 text-xs text-lav-deep font-medium group-hover:underline">
@@ -171,7 +171,7 @@ export default function Home() {
             <p className="text-sm text-text-soft leading-relaxed">
               Whether you&apos;re a first-time parent seeking reassurance or navigating
               a high-risk pregnancy, we meet you where you are with evidence-based
-              guidance and genuine compassion.
+              guidance and compassion.
             </p>
           </div>
           {/* Stats box — sage instead of lavender */}

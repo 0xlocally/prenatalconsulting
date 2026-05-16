@@ -72,7 +72,13 @@ export default function ServicesPage() {
       <section className="max-w-6xl mx-auto px-6 pt-6">
         <p className="text-sm text-[#7A6E9A] leading-relaxed max-w-full mb-6">
           All packages include one-on-one consultations with Dr. Traub Mann.
-          Book before your due date to secure your spot.
+          Book before your due date to secure your spot. Open to Georgia
+          residents only.
+        </p>
+        <p className="text-sm text-[#7A6E9A] leading-relaxed max-w-full mb-6 italic">
+          The patient must physically be located within the state of Georgia at
+          the time telehealth services are provided by a Georgia licensed
+          healthcare provider.
         </p>
       </section>
 

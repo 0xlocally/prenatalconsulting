@@ -65,22 +65,6 @@ export default function ProvidersPage() {
               families during critical moments, is a profound privilege and one
               that I approach with deep commitment, empathy, and compassion.
             </p>
-            <div className="flex gap-2 flex-wrap">
-              {[
-                "Board Certified Neonatologist",
-                "Pediatrician",
-                "NICU Specialist",
-                "High-Risk Pregnancy",
-                "Atlanta, GA",
-              ].map((tag) => (
-                <span
-                  key={tag}
-                  className="bg-sage-pale text-sage-deep rounded-full px-3 py-1 text-[11.5px] font-medium"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
       </section>
